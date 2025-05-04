@@ -3,7 +3,13 @@ function increaseCount() {
     count++; // Increment the count by 1
     displayCount(); // Display the count
     checkCountValue(); // Check count value and display messages
-    
+
+}
+
+function resetCount(){
+    count=0;
+    displayCount(); // Display the count
+    alert("Followers count has been reset.")
 }
 
 function displayCount() {
