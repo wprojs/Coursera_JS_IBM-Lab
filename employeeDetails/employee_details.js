@@ -33,7 +33,7 @@ function findEmployeeById(employeeId) {
  }
 
  // Function to display employees with specialization in JavaScript
-function displayJavaScriptEmployees() {
+function findEmployeeJavaScript() {
     const jsEmployees = employees.filter(employee => employee.specialization === 'Javascript');
     const jsEmployeesDisplay = jsEmployees.map((employee, index) => `<p>${employee.id}: ${employee.name}: ${employee.name} - ${employee.department} - $${employee.salary}</p>`).join('');
     document.getElementById('employeesDetails').innerHTML = jsEmployeesDisplay;
