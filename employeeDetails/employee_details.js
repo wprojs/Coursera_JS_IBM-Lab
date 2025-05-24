@@ -18,14 +18,14 @@ function calculateTotalSalaries() {
 
 function displayHREmployees() {
     const hrEmployees = employees.filter(employee => employee.department === 'HR');
-     const hrEmployeesDisplay = hrEmployees.map((employee, index) => `<p>${employee.id}: ${employee.name}: ${employee.name} - ${employee.department} - $${employee.salary}</p>`).join('');
+     const hrEmployeesDisplay = hrEmployees.map((employee, index) => `<p>${employee.id}: ${employee.name}: - ${employee.department} - $${employee.salary}</p>`).join('');
      document.getElementById('employeesDetails').innerHTML = hrEmployeesDisplay;
 }
 
 function findEmployeeById(employeeId) {
     const foundEmployee = employees.find(employee => employee.id === employeeId);
     if (foundEmployee) {
-        document.getElementById('employeesDetails').innerHTML =`<p>${foundEmployee.id}: ${foundEmployee.name}: ${foundEmployee.name} - ${foundEmployee.department} - $${foundEmployee.salary}</p>`;
+        document.getElementById('employeesDetails').innerHTML =`<p>${foundEmployee.id}: ${foundEmployee.name}: - ${foundEmployee.department} - $${foundEmployee.salary}</p>`;
     }
     else{
         document.getElementById('employeesDetails').innerHTML = 'no employee has been found with this ID';
@@ -33,8 +33,9 @@ function findEmployeeById(employeeId) {
  }
 
  // Function to display employees with specialization in JavaScript
-function findEmployeeJavaScript() {
+//remove duplicate function name    
+function findEmployeeJavaScript() {                                                                                                                                                                                             
     const jsEmployees = employees.filter(employee => employee.specialization === 'Javascript');
-    const jsEmployeesDisplay = jsEmployees.map((employee, index) => `<p>${employee.id}: ${employee.name}: ${employee.name} - ${employee.department} - $${employee.salary}</p>`).join('');
+    const jsEmployeesDisplay = jsEmployees.map((employee, index) => `<p>${employee.id}: ${employee.name}: - ${employee.department} - ${employee.salary}</p>` - ${employee.specialization}).join('');
     document.getElementById('employeesDetails').innerHTML = jsEmployeesDisplay;
 }
