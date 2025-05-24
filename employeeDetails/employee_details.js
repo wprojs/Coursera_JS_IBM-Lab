@@ -36,6 +36,6 @@ function findEmployeeById(employeeId) {
 //remove duplicate function name    
 function findEmployeeJavaScript() {                                                                                                                                                                                             
     const jsEmployees = employees.filter(employee => employee.specialization === 'Javascript');
-    const jsEmployeesDisplay = jsEmployees.map((employee, index) => `<p>${employee.id}: ${employee.name}: - ${employee.department} - ${employee.salary}</p>` - ${employee.specialization}).join('');
+    const jsEmployeesDisplay = jsEmployees.map((employee, index) => `<p>${employee.id}: ${employee.name}: - ${employee.department} - ${employee.salary}- ${employee.specialization}</p>`).join('');
     document.getElementById('employeesDetails').innerHTML = jsEmployeesDisplay;
 }
