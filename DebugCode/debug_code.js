@@ -19,8 +19,10 @@
                 // Introduce a debugger statement to pause execution
                 debugger;
 
+                let sum = a + b;
+                let div = a / b;
                 // Multiply the numbers
-                return a * b;
+                return `a * b:${a * b}  a+b:${sum}  a/b:${div}`;
             }
 
             function displayResult(result) {
